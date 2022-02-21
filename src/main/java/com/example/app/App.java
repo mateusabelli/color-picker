@@ -1,4 +1,4 @@
-package application;
+package com.example.app;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -17,10 +17,10 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(Objects.requireNonNull(
-                getClass().getResource("/MainFrame.fxml")));
+                getClass().getResource("MainFrame.fxml")));
 
         stage.getIcons().add(new Image(Objects.requireNonNull(
-                getClass().getResourceAsStream("/icon.png"))));
+                getClass().getResourceAsStream("icon.png"))));
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
