@@ -26,8 +26,8 @@ public class App extends Application {
         stage.setScene(scene);
 
         stage.setTitle("Color Picker");
-        stage.setMinHeight(450);
-        stage.setMinWidth(350);
+        stage.setMinHeight(570);
+        stage.setMinWidth(360);
         stage.show();
     }
 }
