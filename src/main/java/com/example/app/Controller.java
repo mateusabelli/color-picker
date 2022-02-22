@@ -7,6 +7,8 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 
+import java.lang.annotation.Documented;
+
 public class Controller {
 
     @FXML
@@ -27,13 +29,31 @@ public class Controller {
         String btnId = ((Control) event.getSource()).getId();
 
         switch (btnId) {
-            case "btnRed"    -> titleBox.setStyle("-fx-background-color: RED");
-            case "btnOrange" -> titleBox.setStyle("-fx-background-color: ORANGE");
-            case "btnYellow" -> { titleBox.setStyle("-fx-background-color: YELLOW");
-                titleLabel.setTextFill(Color.BLACK); }
-            case "btnGreen"  -> titleBox.setStyle("-fx-background-color: GREEN");
-            case "btnBlue"   -> titleBox.setStyle("-fx-background-color: BLUE");
-            case "btnPurple" -> titleBox.setStyle("-fx-background-color: PURPLE");
+            case "btnRed" -> {
+                titleBox.setStyle("-fx-background-color: RED");
+                infoLabel.setText(Dictionary.red());
+            }
+            case "btnOrange" -> {
+                titleBox.setStyle("-fx-background-color: ORANGE");
+                infoLabel.setText(Dictionary.orange());
+            }
+            case "btnYellow" -> {
+                titleBox.setStyle("-fx-background-color: YELLOW");
+                titleLabel.setTextFill(Color.BLACK);
+                infoLabel.setText(Dictionary.yellow());
+            }
+            case "btnGreen" -> {
+                titleBox.setStyle("-fx-background-color: GREEN");
+                infoLabel.setText(Dictionary.green());
+            }
+            case "btnBlue" -> {
+                titleBox.setStyle("-fx-background-color: BLUE");
+                infoLabel.setText(Dictionary.blue());
+            }
+            case "btnPurple" -> {
+                titleBox.setStyle("-fx-background-color: PURPLE");
+                infoLabel.setText(Dictionary.purple());
+            }
         }
     }
 }
